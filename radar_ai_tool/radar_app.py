@@ -29,8 +29,7 @@ except ImportError:
     except ImportError:
         LANGCHAIN_AVAILABLE = False
         st.error(
-            "No LLM integration available. Please install requirements: "
-            "uv add -r requirements_radar.txt"
+            "No LLM integration available. Please install requirements: " "uv sync"
         )
 
 
@@ -69,15 +68,14 @@ class RADARAnalyzer:
         # Check for available LLM integration
         if not (LANGGRAPH_AVAILABLE or LANGCHAIN_AVAILABLE):
             st.error(
-                "No LLM integration available. Please install requirements: "
-                "uv add -r requirements_radar.txt"
+                "No LLM integration available. Please install requirements: " "uv sync"
             )
             st.stop()
 
         # Require API key
         if not st.secrets.get("openai_api_key"):
             st.error(
-                "OpenAI API key not found. Please add it to " ".streamlit/secrets.toml"
+                "OpenAI API key not found. Please add it to .streamlit/secrets.toml"
             )
             st.stop()
 
@@ -520,30 +518,30 @@ def main():
         st.markdown("### How RADAR Analysis Works")
         st.markdown(
             """
-        **RADAR evaluates product opportunities against organizational "
-        "strategy** by analyzing your proposal through four strategic lenses.
-        Our AI agents review your documents, research, and strategic "
-        "materials to strengthen decision-making across these crucial areas:
+        **RADAR evaluates product opportunities against organizational
+        strategy** by analyzing your proposal through four strategic lenses.
+        Our AI agents review your documents, research, and strategic
+        materials to strengthen decision-making across these crucial areas:
 
-        **Visibility** - Is this theme visible across leadership reviews "
-        "and other teams' initiatives?
-        *Checks for organizational awareness and whether similar work "
-        "exists elsewhere*
+        **Visibility** - Is this theme visible across leadership reviews
+        and other teams' initiatives?
+        *Checks for organizational awareness and whether similar work
+        exists elsewhere*
 
         **Alignment** - Does it connect clearly to the strategy and OKRs?
-        *Validates direct connection to documented strategic priorities "
-        "and key results*
+        *Validates direct connection to documented strategic priorities
+        and key results*
 
-        **Confidence** - Are the assumptions valid, and do the leading "
-        "indicators tie back to lagging KPIs?
+        **Confidence** - Are the assumptions valid, and do the leading
+        indicators tie back to lagging KPIs?
         *Assesses assumption validity and metric reliability*
 
-        **User Problems** - Is the opportunity anchored in real user "
-        "research and feedback?
+        **User Problems** - Is the opportunity anchored in real user
+        research and feedback?
         *Confirms user validation and problem-solution fit*
 
-        Each lens receives a score from 1-10, with higher scores indicating "
-        "stronger strategic positioning.
+        Each lens receives a score from 1-10, with higher scores indicating
+        stronger strategic positioning.
         """
         )
 
