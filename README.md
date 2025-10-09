@@ -1,10 +1,10 @@
-# RECAP - AI-Powered Product Strategy Review Tool
+# RADAR - AI-Powered Product Strategy Review Tool
 
 A production-ready AI system that reviews product proposals against organizational strategy using the four RECAP lenses: Visibility, Alignment, Confidence, User Problems.
 
 ## Overview
 
-RECAP helps product teams validate their proposals by analyzing them against:
+RADAR helps product teams validate their proposals by analyzing them against:
 - **Visibility**: Conflicts with other teams and historical projects
 - **Alignment**: Strategic fit with company goals and OKRs
 - **Confidence**: Assumption validation and success metrics
@@ -12,7 +12,7 @@ RECAP helps product teams validate their proposals by analyzing them against:
 
 ## Features
 
-- Real OpenAI GPT integration for intelligent analysis
+- OpenAI GPT integration for intelligent analysis
 - Document-grounded insights using organizational knowledge
 - Interactive radar charts and scoring visualizations
 - Structured recommendations and action items
@@ -46,7 +46,7 @@ RECAP helps product teams validate their proposals by analyzing them against:
 ## Usage
 
 1. Enter your product proposal in the text area
-2. Click "Run RECAP Analysis" to get AI-powered insights
+2. Click "Run RADAR Analysis" to get AI-powered insights
 3. Review the four-lens analysis with scores and recommendations
 4. Use the insights to refine your proposal or planning approach
 
@@ -64,10 +64,3 @@ The system includes realistic strategy documents:
 - **AI Backend**: OpenAI GPT-3.5-turbo via LangChain
 - **Document Processing**: Markdown file ingestion
 - **Scoring**: Multi-agent analysis with structured JSON responses
-
-## Production Considerations
-
-- API rate limiting and error handling implemented
-- Fallback responses for LLM failures
-- Modular agent architecture for easy extension
-- Clean separation of concerns between UI and AI logic
