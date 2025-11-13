@@ -1,6 +1,6 @@
 # RADAR - AI-Powered Product Strategy Review Tool
 
-AI system that reviews product proposals against organizational strategy using the four RECAP lenses: Visibility, Alignment, Confidence, User Problems.
+AI system that reviews product proposals against organizational strategy
 
 ## Overview
 
